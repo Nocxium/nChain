@@ -9,8 +9,11 @@ nChain should work on most if not all linux environments. Im using NixOS with hy
 ** How to use it
 *** Installation
 Clone the repo to your home/.config folder.
+
 run chmod +x on all the .sh files, as well as the nChain file.
+
 Move the nChain file to /usr/bin/
+
 If you aren't a nix user you can ignore/remove the nChain.nix file.
 
 For nix users, you can either follow the above steps, or just use the nChain.nix file with your config instead of using the regular nChain (bash) file.
