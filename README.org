@@ -5,18 +5,42 @@
 nChain is a theme changer for Linux, with a focus on being very flexible and without any special dependancies (Outside of the basic Linux tools).
 It works by creating and removing links to your files each time you change a theme.
 
+nChain can be used with many lauchers, such as Rofi, dmenu, Wofi. Or you could just run it directly from the terminal.
+
 nChain should work on most if not all linux environments. Im using NixOS with hyprland myself, although I've used it with Arch and Debian as well.
-** How to use it
-*** Installation
+
+** Important notes
+Even though I've programmed nChain to not remove any files unless they are links, and to not remove folders that aren't empty, I still HIGHLY suggest that you backup your data before trying out these scripts. When you try it out for the first time, just add a single folder with a file inside of your theme to see that it works as you expect it to.
+
+Use nChain at your own risk.
+
+Additionally, don't include any space in your theme names.
+
+** Installation
 Clone the repo to your home/.config folder.
 
-run chmod +x on all the .sh files, as well as the nChain file.
+#+begin_src shell
+git clone git@github.com:Nocxium/nChain.git $HOME/.config
+#+end_src
 
-Move the nChain file to /usr/bin/
+Run chmod +x on all the .sh files, as well as the nChain file.
+
+#+begin_src shell
+cd $HOME/.config/nChain
+chmod +x nChain
+chmod +x scripts/*
+#+end_src
+
+Move the nChain file to /usr/bin/ (Unless you are on NixOS)
+
+#+begin_src shell
+sudo mv nChain /usr/bin/
+#+end_src
 
 If you aren't a nix user you can ignore/remove the nChain.nix file.
 
-For nix users, you can either follow the above steps, or just use the nChain.nix file with your config instead of using the regular nChain (bash) file.
+For nix users, you can either follow the above steps (but add the nChain file to your path in another location), or just use the nChain.nix file with your config instead of using the regular nChain (bash) file.
+** How to use it
 *** File structure
 If you have ever used stow to manage your dotfiles, you will feel right at home. The structure is very similar. If not, watch the example below. It is quite staightforward once you wrap your head around it.
 
@@ -38,8 +62,11 @@ The the structure looks like this:
 #+end_src
 
 You start by creating a folder with your themes name inside the "themes" folder.
+
 IMPORTANT! Theme names can't include a space.
+
 Once you are inside your theme folder, you should see it as the base of your home folder.
+
 If you for example want to change the dunst, kitty and waybar config for each theme, the tree structure could look like this:
 
 #+begin_src shell
