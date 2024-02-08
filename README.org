@@ -3,7 +3,7 @@
 * nChain
 ** What is nChain
 nChain is a theme changer for Linux, with a focus on being very flexible and without any special dependancies (Outside of the basic Linux tools).
-It works by creating and removing links to your files each time you change a theme.
+It works by creating and removing symlinks to your files each time you change a theme.
 
 nChain can be used with many lauchers, such as Rofi, dmenu, Wofi. Or you could just run it directly from the terminal.
 
