@@ -5,12 +5,20 @@
 nChain is a theme changer for Linux, with a focus on being very flexible and without any special dependancies (Outside of the basic Linux tools).
 It works by creating and removing links to your files each time you change a theme.
 
-nChain should work on most if not all linux environments. Im using nixOS with hyprland myself.
+nChain should work on most if not all linux environments. Im using NixOS with hyprland myself, although I've used it with Arch and Debian as well.
 ** How to use it
+*** Installation
+Clone the repo to your home/.config folder.
+run chmod +x on all the .sh files, as well as the nChain file.
+Move the nChain file to /usr/bin/
+If you aren't a nix user you can ignore/remove the nChain.nix file.
+
+For nix users, you can either follow the above steps, or just use the nChain.nix file with your config instead of using the regular nChain (bash) file.
 *** File structure
 If you have ever used stow to manage your dotfiles, you will feel right at home. The structure is very similar. If not, watch the example below. It is quite staightforward once you wrap your head around it.
-All themes go under the theme folder.
-Optional scripts under the script folder.
+
+All themes go under the theme folder, and optional scripts under the script folder.
+
 You shouldnt touch the links folder. nChain uses that to store paths to linked files
 **** Structure example
 The the structure looks like this:
@@ -108,6 +116,7 @@ categories=(
 #+end_src
 
 The file should be pretty self-explanitory, but to give some additional information:
+
 folders_to_skip should contain any optional folders in "themes" folder that you dont want included in your launcher. Wildcards are accepted.
 
 If you have a theme that you want to run different post_commands with, you can just create a file called "your_theme_name.sh", and that sh file will be used as your post_commands instead. Don't forget to chmod +x that file.
