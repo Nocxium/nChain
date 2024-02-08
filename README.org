@@ -1,6 +1,9 @@
 #+options: \n:t
+#+STARTUP: inlineimages
 
 * nChain
+[[img:./images/MoonScape.png][MoonScape]]
+[[/home/nocxium/Documents/publicrepos/images/][rts]]
 ** What is nChain
 nChain is a theme changer for Linux, with a focus on being very flexible and without any special dependancies (Outside of the basic Linux tools).
 It works by creating and removing symlinks to your files each time you change a theme.
