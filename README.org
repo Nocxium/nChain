@@ -7,14 +7,14 @@ It works by creating and removing links to your files each time you change a the
 
 nChain can be used with many lauchers, such as Rofi, dmenu, Wofi. Or you could just run it directly from the terminal.
 
-nChain should work on most if not all linux environments. Im using NixOS with hyprland myself, although I've used it with Arch and Debian as well.
+nChain should work on most, if not all linux environments. Im using NixOS with hyprland myself, although I've used it with Arch and Debian as well.
 
 ** Important notes
 Even though I've programmed nChain to not remove any files unless they are links, and to not remove folders that aren't empty, I still HIGHLY suggest that you backup your data before trying out these scripts. When you try it out for the first time, just add a single folder with a file inside of your theme to see that it works as you expect it to.
 
 Use nChain at your own risk.
 
-Additionally, don't include any space in your theme names.
+Additionally, don't include any spaces in your theme names.
 
 ** Installation
 Clone the repo to your home/.config folder.
@@ -151,4 +151,4 @@ folders_to_skip should contain any optional folders in "themes" folder that you 
 
 If you have a theme that you want to run different post_commands with, you can just create a file called "your_theme_name.sh", and that sh file will be used as your post_commands instead. Don't forget to chmod +x that file.
 
-nChain also allows you to put different themes in different categories for your launcher. Put the name of the categorie inside the brackets, and then the name of the themes after the equal sign.
+nChain also allows you to put different themes in different categories for your launcher. Put the name of the category inside the brackets, and then the name of the themes after the equal sign.
