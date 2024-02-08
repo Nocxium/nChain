@@ -109,6 +109,10 @@ As you can see, inside each of your theme folder, you are treating it as your ho
 
 If you for example change to theme1 now, its config files will now be symlinked to your homefolders .config folder. If you change it to theme2, nChain will unlink theme1 files, and now link your theme2 files.
 
+IMPORTANT: You only want to include the config files that you will be editing in your themes folder.
+
+For example, if a program has config file A and B, but A is always the same in all your themes, don't include that file in your theme... you don't need to have that file as a symlink.
+
 If you want more examples, I suggest watching videos on youtube about stow and dotfiles, since they follow the same filestructure.
 
 
