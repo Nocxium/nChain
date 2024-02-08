@@ -12,9 +12,6 @@ pre_commands=(
 
 post_commands=(
   # Optional commands to run after the theme change. Put each command inside "". Here are some examples:
-  # "pkill -f waybar"
-  # "waybar &"
-  # "swww img $HOME/Pictures/Wallpapers/currentWallpaper-1 --transition-type wipe --transition-fps 60"
   # "killall .dunst-wrapped"
   # "kill -SIGUSR1 $(pidof kitty)"
   # "$HOME/.config/nChain/scripts/notify-send.sh &"
