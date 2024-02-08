@@ -40,6 +40,12 @@ sudo mv nChain /usr/bin/
 If you aren't a nix user you can ignore/remove the nChain.nix file.
 
 For nix users, you can either follow the above steps (but add the nChain file to your path in another location), or just use the nChain.nix file with your config instead of using the regular nChain (bash) file.
+
+You can now use nChain by typing it in the terminal. To list all commands, run
+
+#+begin_src shell
+nChain -h
+#+end_src
 ** How to use it
 *** File structure
 If you have ever used stow to manage your dotfiles, you will feel right at home. The structure is very similar. If not, watch the example below. It is quite staightforward once you wrap your head around it.
