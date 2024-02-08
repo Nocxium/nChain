@@ -15,9 +15,9 @@ post_commands=(
   # "pkill -f waybar"
   # "waybar &"
   # "swww img $HOME/Pictures/Wallpapers/currentWallpaper-1 --transition-type wipe --transition-fps 60"
-  # "$HOME/.config/nChain/scripts/gsettings.sh &"
   # "killall .dunst-wrapped"
   # "kill -SIGUSR1 $(pidof kitty)"
+  # "$HOME/.config/nChain/scripts/notify-send.sh &"
 )
 
 # Define optional categories and subcategories
