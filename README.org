@@ -1,0 +1,108 @@
+* nChain
+** What is nChain
+nChain is a theme changer for Linux, with a focus on being very flexible and without any special dependancies (Outside of the basic Linux tools).
+It works by creating and removing links to your files each time you change a theme.
+
+nChain should work on most if not all linux environments. Im using nixOS with hyprland myself.
+** How to use it
+*** File structure
+If you have ever used stow to manage your dotfiles, you will feel right at home. The structure is very similar. If not, watch the example below. It is quite staightforward once you wrap your head around it.
+All themes go under the theme folder.
+Optional scripts under the script folder.
+You shouldnt touch the links folder. nChain uses that to store paths to linked files
+**** Structure example
+The the structure looks like this:
+.
+├── links
+├── scripts
+│   ├── linkGen.sh
+│   └── settings.sh
+└── themes
+    ├── theme1
+    ├── theme2
+    └── theme3
+
+You start by creating a folder with your themes name inside the "themes" folder.
+IMPORTANT! Theme names can't include a space.
+Once you are inside your theme folder, you should see it as the base of your home folder.
+If you for example want to change the dunst, kitty and waybar config for each theme, the tree structure could look like this:
+
+├── links
+├── scripts
+│   ├── linkGen.sh
+│   └── settings.sh
+└── themes
+    ├── theme1
+    │   └── .config
+    │       ├── dunst
+    │       │   └── dunstrc
+    │       ├── kitty
+    │       │   └── theme.conf
+    │       └── waybar
+    │           ├── config.jsonc
+    │           └── style.css
+    ├── theme2
+    │   └── .config
+    │       ├── dunst
+    │       │   └── dunstrc
+    │       ├── kitty
+    │       │   └── theme.conf
+    │       └── waybar
+    │           ├── config.jsonc
+    │           └── style.css
+    └── theme3
+        └── .config
+            ├── dunst
+            │   └── dunstrc
+            ├── kitty
+            │   └── theme.conf
+            └── waybar
+                ├── config.jsonc
+                └── style.css
+
+As you can see, inside each of your theme folder, you are treating it as your home folder, and navigating to the rofi config folder with .config/rofi
+
+If you for example change to theme1 now, its config files will now be symlinked to your homefolders .config folder. If you change it to theme2, nChain will unlink theme1 files, and now link your theme2 files.
+
+If you want more examples, I suggest watching videos on youtube about stow and dotfiles, since they follow the same filestructure.
+
+
+*** Configuration
+If you open settings.sh in the script folder, you will see the following:
+#+begin_src shell
+# launcher="rofi -dmenu -i -p 'Select theme:'"
+
+folders_to_skip=(
+  # "folder_one"
+  # "folder_two"
+)
+
+pre_commands=(
+  # These commands are running before the theme change'"
+)
+
+post_commands=(
+  # Optional commands to run after the theme change. Put each command inside "". Here are some examples:
+  # "pkill -f waybar"
+  # "waybar &"
+  # "swww img $HOME/Pictures/Wallpapers/currentWallpaper-1 --transition-type wipe --transition-fps 60"
+  # "$HOME/.config/nChain/scripts/gsettings.sh &"
+  # "killall .dunst-wrapped"
+  # "kill -SIGUSR1 $(pidof kitty)"
+)
+
+# Define optional categories and subcategories
+declare -A categories
+categories=(
+  # ["Flower"]="Autumn Chiaroscuro Winter-green"
+  # ["Experiment"]="Fern Leaf-seasons MoonScape Snowy-Umbrella Trippy-Mountain Yellow-haze"
+)
+
+#+end_src
+
+The file should be pretty self-explanitory, but to give some additional information:
+folders_to_skip should contain any optional folders in "themes" folder that you dont want included in your launcher. Wildcards are accepted.
+
+If you have a theme that you want to run different post_commands with, you can just create a file called "your_theme_name.sh", and that sh file will be used as your post_commands instead. Don't forget to chmod +x that file.
+
+nChain also allows you to put different themes in different categories for your launcher. Put the name of the categorie inside the brackets, and then the name of the themes after the equal sign.
