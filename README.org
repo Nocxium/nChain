@@ -1,3 +1,5 @@
+#+options: \n:t
+
 * nChain
 ** What is nChain
 nChain is a theme changer for Linux, with a focus on being very flexible and without any special dependancies (Outside of the basic Linux tools).
