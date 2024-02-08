@@ -12,6 +12,7 @@ Optional scripts under the script folder.
 You shouldnt touch the links folder. nChain uses that to store paths to linked files
 **** Structure example
 The the structure looks like this:
+#+begin_src shell
 .
 ├── links
 ├── scripts
@@ -21,12 +22,14 @@ The the structure looks like this:
     ├── theme1
     ├── theme2
     └── theme3
+#+end_src
 
 You start by creating a folder with your themes name inside the "themes" folder.
 IMPORTANT! Theme names can't include a space.
 Once you are inside your theme folder, you should see it as the base of your home folder.
 If you for example want to change the dunst, kitty and waybar config for each theme, the tree structure could look like this:
 
+#+begin_src shell
 ├── links
 ├── scripts
 │   ├── linkGen.sh
@@ -60,6 +63,8 @@ If you for example want to change the dunst, kitty and waybar config for each th
                 ├── config.jsonc
                 └── style.css
 
+#+end_src
+
 As you can see, inside each of your theme folder, you are treating it as your home folder, and navigating to the rofi config folder with .config/rofi
 
 If you for example change to theme1 now, its config files will now be symlinked to your homefolders .config folder. If you change it to theme2, nChain will unlink theme1 files, and now link your theme2 files.
@@ -70,7 +75,7 @@ If you want more examples, I suggest watching videos on youtube about stow and d
 *** Configuration
 If you open settings.sh in the script folder, you will see the following:
 #+begin_src shell
-# launcher="rofi -dmenu -i -p 'Select theme:'"
+launcher="rofi -dmenu -i -p 'Select theme:'"
 
 folders_to_skip=(
   # "folder_one"
