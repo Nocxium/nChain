@@ -33,6 +33,8 @@ Even though I've programmed nChain to not remove/overwrite any files unless they
 
 Use nChain at your own risk.
 
+Do *NOT* modify or move the linkgen.sh file unless you know what you are doing.
+
 Additionally, don't include any spaces in your theme names.
 
 ** Installation
@@ -142,6 +144,7 @@ If you want more examples, I suggest that you take a look at my nChain-example r
 
 
 *** Configuration
+Do NOT modify or move the linkgen.sh file, unless you know what you are doing. Use settings.sh instead.
 If you open settings.sh in the script folder, you will see the following:
 #+begin_src shell
 launcher="rofi -dmenu -i -p 'Select theme:'"
