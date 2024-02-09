@@ -2,8 +2,15 @@
 #+STARTUP: inlineimages
 
 * nChain
-[[img:./images/MoonScape.png][MoonScape]]
-[[/home/nocxium/Documents/publicrepos/images/][rts]]
+[[file:examples/Cat-ppuccin.png]]
+[[file:examples/Trippy-Mountain.png]]
+[[file:examples/Leaf-seasons.png]]
+[[file:examples/MoonScape.png]]
+[[file:examples/Rainy-Forest.png]]
+[[file:examples/Snowy-Umbrella.png]]
+[[file:examples/Snowy-Umbrella-Dark.png]]
+[[file:examples/Wintergreen.png]]
+
 ** What is nChain
 nChain is a theme changer for Linux, with a focus on being very flexible and without any special dependancies (Outside of the basic Linux tools).
 It works by creating and removing symlinks to your files each time you change a theme.
@@ -23,7 +30,7 @@ Additionally, don't include any spaces in your theme names.
 Clone the repo to your home/.config folder.
 
 #+begin_src shell
-git clone git@github.com:Nocxium/nChain.git $HOME/.config
+git clone https://github.com/Nocxium/nChain.git $HOME/.config/nChain
 #+end_src
 
 Run chmod +x on all the .sh files, as well as the nChain file.
