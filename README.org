@@ -90,7 +90,7 @@ The the structure looks like this:
 
 You start by creating a folder with your themes name inside the "themes" folder.
 
-IMPORTANT! Theme names can't include a space.
+*IMPORTANT!* Theme names can't include a space.
 
 Once you are inside your theme folder, you should see it as the base of your home folder.
 
@@ -136,7 +136,7 @@ As you can see, inside each of your theme folder, you are treating it as your ho
 
 If you for example change to theme1 now, its config files will now be symlinked to your homefolders .config folder. If you change it to theme2, nChain will unlink theme1 files, and now link your theme2 files.
 
-IMPORTANT: You only want to include the config files that you will be editing in your themes folder.
+*IMPORTANT!* You only want to include the config files that you will be editing in your themes folder.
 
 For example, if a program has config file A and B, but A is always the same in all your themes, don't include that file in your theme... you don't need to have that file as a symlink.
 
@@ -144,7 +144,7 @@ If you want more examples, I suggest that you take a look at my nChain-example r
 
 
 *** Configuration
-Do NOT modify or move the linkgen.sh file, unless you know what you are doing. Use settings.sh instead.
+Do *NOT* modify or move the linkgen.sh file, unless you know what you are doing. Use settings.sh instead.
 If you open settings.sh in the script folder, you will see the following:
 #+begin_src shell
 launcher="rofi -dmenu -i -p 'Select theme:'"
