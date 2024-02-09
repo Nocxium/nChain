@@ -8,6 +8,8 @@ nChain can be used with many lauchers, such as Rofi, dmenu, Wofi. Or you could j
 
 nChain should work on most, if not all linux environments. Im using NixOS with hyprland myself, although I've used it with Arch and Debian as well.
 
+You can find some of my themes here as a reference https://github.com/Nocxium/nChain-example
+
 [[file:examples/Cat-ppuccin.png]]
 [[file:examples/Trippy-Mountain.png]]
 [[file:examples/Leaf-seasons.png]]
