@@ -24,7 +24,7 @@ You can find some of my themes here as a reference https://github.com/Nocxium/nC
 - No special dependancies. Can run on most, if not all Linux distos/WM/DE
 - Ability to customize what commands to run after a specific theme change
 - Ability to put themes into categories when ran from a launcher like rofi.
-- Add a fallback theme with "nChain -t yourtheme default". Also helpful to avoid having multiple copies.
+- Add a fallback theme with "nChain -t yourtheme default". Also helpful to avoid having multiple copies of files you want to use in multiple themes, but not all.
 - Works with multiple different launchers like Rofi, dmenu, wofi etc. Can also be run entirely from the terminal.
 - Easily extendible with other scripts
 
