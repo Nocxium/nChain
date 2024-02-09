@@ -1,7 +1,13 @@
 #+options: \n:t
-#+STARTUP: inlineimages
 
-* nChain
+* What is nChain
+nChain is a theme changer for Linux, with a focus on being very flexible and without any special dependancies (Outside of the basic Linux tools).
+It works by creating and removing symlinks to your files each time you change a theme.
+
+nChain can be used with many lauchers, such as Rofi, dmenu, Wofi. Or you could just run it directly from the terminal.
+
+nChain should work on most, if not all linux environments. Im using NixOS with hyprland myself, although I've used it with Arch and Debian as well.
+
 [[file:examples/Cat-ppuccin.png]]
 [[file:examples/Trippy-Mountain.png]]
 [[file:examples/Leaf-seasons.png]]
@@ -10,14 +16,6 @@
 [[file:examples/Snowy-Umbrella.png]]
 [[file:examples/Snowy-Umbrella-Dark.png]]
 [[file:examples/Winter-green.png]]
-
-** What is nChain
-nChain is a theme changer for Linux, with a focus on being very flexible and without any special dependancies (Outside of the basic Linux tools).
-It works by creating and removing symlinks to your files each time you change a theme.
-
-nChain can be used with many lauchers, such as Rofi, dmenu, Wofi. Or you could just run it directly from the terminal.
-
-nChain should work on most, if not all linux environments. Im using NixOS with hyprland myself, although I've used it with Arch and Debian as well.
 
 ** Important notes
 Even though I've programmed nChain to not remove any files unless they are links, and to not remove folders that aren't empty, I still HIGHLY suggest that you backup your data before trying out these scripts. When you try it out for the first time, just add a single folder with a file inside of your theme to see that it works as you expect it to.
