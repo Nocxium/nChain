@@ -20,6 +20,6 @@ post_commands=(
 # Define optional categories and subcategories
 declare -A categories
 categories=(
-  # ["Flower"]="Autumn Chiaroscuro Winter-green"
-  # ["Experiment"]="Fern Leaf-seasons MoonScape Snowy-Umbrella Trippy-Mountain Yellow-haze"
+  # ["Nature"]="Leaf-seasons Rainy-Forest Winter-green Trippy-Mountain"
+  # ["Minimalistic"]="Cat-ppuccin"
 )

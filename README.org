@@ -17,8 +17,17 @@ nChain should work on most, if not all linux environments. Im using NixOS with h
 [[file:examples/Snowy-Umbrella-Dark.png]]
 [[file:examples/Winter-green.png]]
 
+** Key features
+- Create and change themes easily
+- No special dependancies. Can run on most, if not all Linux distos/WM/DE
+- Ability to customize what commands to run after a specific theme change
+- Ability to put themes into categories when ran from a launcher like rofi.
+- Add a fallback theme with "nChain -t yourtheme default". Also helpful to avoid having multiple copies.
+- Works with multiple different launchers like Rofi, dmenu, wofi etc. Can also be run entirely from the terminal.
+- Easily extendible with other scripts
+
 ** Important notes
-Even though I've programmed nChain to not remove any files unless they are links, and to not remove folders that aren't empty, I still HIGHLY suggest that you backup your data before trying out these scripts. When you try it out for the first time, just add a single folder with a file inside of your theme to see that it works as you expect it to.
+Even though I've programmed nChain to not remove/overwrite any files unless they are links, and to not remove folders that aren't empty, I still HIGHLY suggest that you backup your data before trying out these scripts. When you try it out for the first time, just add a single folder with a file inside of your theme to see that it works as you expect it to.
 
 Use nChain at your own risk.
 
@@ -127,7 +136,7 @@ IMPORTANT: You only want to include the config files that you will be editing in
 
 For example, if a program has config file A and B, but A is always the same in all your themes, don't include that file in your theme... you don't need to have that file as a symlink.
 
-If you want more examples, I suggest watching videos on youtube about stow and dotfiles, since they follow the same filestructure.
+If you want more examples, I suggest that you take a look at my nChain-example repo https://github.com/Nocxium/nChain-example, which contains the themes in the pictures above. Note that there are still some adjustments I haven't had time to do yet. But you will see how it is structured, and maybe even get ideas on how to extend it with other scripts like I have done.
 
 
 *** Configuration
@@ -154,10 +163,9 @@ post_commands=(
 # Define optional categories and subcategories
 declare -A categories
 categories=(
-  # ["Flower"]="Autumn Chiaroscuro Winter-green"
-  # ["Experiment"]="Fern Leaf-seasons MoonScape Snowy-Umbrella Trippy-Mountain Yellow-haze"
+  # ["Nature"]="Leaf-seasons Rainy-Forest Winter-green Trippy-Mountain"
+  # ["Minimalistic"]="Cat-ppuccin"
 )
-
 #+end_src
 
 The file should be pretty self-explanitory, but to give some additional information:
