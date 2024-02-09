@@ -4,7 +4,7 @@
 nChain is a theme changer for Linux, with a focus on being very flexible and without any special dependancies (Outside of the basic Linux tools).
 It works by creating and removing symlinks to your files each time you change a theme.
 
-nChain can be used with many lauchers, such as Rofi, dmenu, Wofi. Or you could just run it directly from the terminal.
+nChain can be used with many lauchers, such as Rofi, dmenu and Wofi. Or you could just run it directly from the terminal.
 
 nChain should work on most, if not all linux environments. Im using NixOS with hyprland myself, although I've used it with Arch and Debian as well.
 
