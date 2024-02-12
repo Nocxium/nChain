@@ -75,7 +75,7 @@ All themes go under the theme folder, and optional scripts under the script fold
 
 You shouldnt touch the links folder. nChain uses that to store paths to linked files
 **** Structure example
-After creating your theme folder(s) inside nChain/themes, the the structure inside ~/.config/nChain should look something like this:
+You start by creating a folder with your themes name inside the "themes" folder. The structure inside ~/.config/nChain should look something like this:
 #+begin_src shell
 .
 ├── links
@@ -88,7 +88,6 @@ After creating your theme folder(s) inside nChain/themes, the the structure insi
     └── theme3
 #+end_src
 
-You start by creating a folder with your themes name inside the "themes" folder.
 
 *IMPORTANT!* Theme names can't include a space.
 
