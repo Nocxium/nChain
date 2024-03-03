@@ -8,7 +8,7 @@ if [ -d "$directory" ]; then
     if [ "$(basename "$file")" != "default" ] && [ -f "$file" ]; then
       filename=$(basename "$file")
       filename="${filename^}"
-      notify-send -u low "Theme: $filename"
+      notify-send -u low -a nChain "Theme: $filename"
     fi
   done
 fi
